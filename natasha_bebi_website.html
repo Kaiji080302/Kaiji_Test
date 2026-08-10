@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#ff8fb3">
+<title>For Natasha, My Bebi 💗</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap');
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Poppins,sans-serif;color:#61364b;background:linear-gradient(135deg,#fff5f8,#ffe1ec,#fff7fa);min-height:100vh;overflow-x:hidden}
+.bg{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}.float{position:absolute;bottom:-40px;animation:up linear infinite;opacity:.55}
+@keyframes up{to{transform:translateY(-115vh) rotate(35deg);opacity:0}}
+.wrap{position:relative;z-index:1;width:min(900px,92%);margin:auto;padding:25px 0 55px}
+.card{background:rgba(255,255,255,.78);backdrop-filter:blur(14px);border:1px solid #fff;border-radius:30px;box-shadow:0 18px 55px rgba(181,71,112,.14);padding:35px;text-align:center;margin-top:22px}
+.hero{min-height:88vh;display:grid;place-items:center;padding:35px 22px}
+.kicker{font-weight:600;color:#d95784;letter-spacing:1px}.spark{font-size:42px;animation:pulse 1.6s infinite}
+@keyframes pulse{50%{transform:scale(1.18)}}
+h1,h2{font-family:'Dancing Script',cursive;color:#d84f7d}
+h1{font-size:clamp(4.2rem,16vw,8rem);line-height:.8;margin:14px 0 25px}
+h2{font-size:clamp(2.6rem,8vw,4rem);margin:0 0 10px}
+p{line-height:1.8}.lead{font-size:1.1rem;max-width:680px;margin:0 auto 20px}.pink{color:#d84f7d;font-weight:700}
+button{border:0;border-radius:999px;padding:14px 22px;font:inherit;font-weight:700;cursor:pointer;transition:.2s}
+button:hover{transform:translateY(-2px)}.primary{color:#fff;background:linear-gradient(135deg,#ed6b99,#cf4275);box-shadow:0 10px 24px #d84f7d44}.light{background:#fff;color:#cf4275;border:1px solid #f2bfd0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}.reason{padding:20px 13px;border-radius:22px;background:#fff7fa;border:1px solid #f7d5e1}.emoji{font-size:35px}.reason strong{display:block;margin:8px 0 4px}
+.game{min-height:500px}.score{font-weight:700;color:#d84f7d}.gamearea{height:230px;position:relative;overflow:hidden;background:linear-gradient(135deg,#fff0f6,#ffe3ee);border:1px dashed #efadc4;border-radius:22px;margin:20px 0}
+#heart{display:none;position:absolute;background:#fff;border:2px solid #f2aec6;border-radius:999px;padding:11px 15px;font-size:27px;box-shadow:0 8px 20px #c83f7030}
+#gameMsg{min-height:58px}.final{display:none}.big{font-size:80px;animation:beat 1s infinite}@keyframes beat{50%{transform:scale(1.12)}}
+footer{text-align:center;opacity:.65;font-size:.85rem;padding:25px}
+@media(max-width:650px){.grid{grid-template-columns:1fr}.card{padding:27px 17px}.hero{min-height:90vh}}
+</style>
+</head>
+<body>
+<div class="bg">
+ <span class="float" style="left:5%;font-size:24px;animation-duration:10s">♡</span>
+ <span class="float" style="left:17%;font-size:18px;animation-duration:13s;animation-delay:2s">♥</span>
+ <span class="float" style="left:32%;font-size:28px;animation-duration:11s;animation-delay:4s">♡</span>
+ <span class="float" style="left:49%;font-size:19px;animation-duration:14s;animation-delay:1s">♥</span>
+ <span class="float" style="left:67%;font-size:25px;animation-duration:12s;animation-delay:5s">♡</span>
+ <span class="float" style="left:83%;font-size:20px;animation-duration:10s;animation-delay:3s">♥</span>
+</div>
+
+<main class="wrap">
+<section class="hero card">
+ <div>
+  <div class="spark">✨</div>
+  <div class="kicker">A tiny website for my favorite girl</div>
+  <h1>Natasha</h1>
+  <p class="lead">
+   Hi, <span class="pink">Bebi</span>. I just wanted to make something that reminds you
+   of something very important:
+   <span class="pink">you are SO pretty.</span> 💗
+  </p>
+  <p class="lead">
+   You're hyper, you're ridiculously talkative, you're adorable...
+   and somehow those are exactly some of the things I love about you. 😭💕
+  </p>
+  <button class="primary" onclick="document.getElementById('reasons').scrollIntoView()">Continue, Bebi 💕</button>
+ </div>
+</section>
+
+<section class="card" id="reasons">
+ <h2>Why I love my Bebi</h2>
+ <p>According to highly reliable boyfriend science:</p>
+ <div class="grid">
+  <div class="reason"><div class="emoji">⚡</div><strong>Hyper Bebi</strong><span>Your energy could probably power the whole city.</span></div>
+  <div class="reason"><div class="emoji">🗣️</div><strong>Talkative Bebi</strong><span>You don't run out of stories. Ever. And honestly, I love listening.</span></div>
+  <div class="reason"><div class="emoji">🥹</div><strong>Pretty Bebi</strong><span>This one isn't even debatable. Face card = undefeated.</span></div>
+ </div>
+</section>
+
+<section class="card game">
+ <h2>Catch the Bebi 💗</h2>
+ <p id="gameMsg">Cute game time! Catch <b>5 hearts</b>. Each one comes with a message for you. 😌</p>
+ <div class="score" id="score">Bebi hearts: 0 / 5</div>
+ <div class="gamearea" id="area"><button id="heart">💗</button></div>
+ <button class="primary" id="start" onclick="startGame()">Start the cute game 🎮</button>
+ <div class="final" id="final">
+  <div class="big">💖</div>
+  <h2>You caught them all!</h2>
+  <p>
+   Congratulations, Bebi! 🥳<br>
+   You caught 5 hearts... but there is one thing you still can't catch:
+   <span class="pink">how much I adore you.</span> 😭💕
+  </p>
+  <button class="light" onclick="startGame()">Again! ♡</button>
+ </div>
+</section>
+
+<section class="card">
+ <h2>Okay, seriously...</h2>
+ <p class="lead">
+  Natasha, you're beautiful even when you're being hyper,
+  beautiful when you're talking my ear off,
+  beautiful when you're laughing,
+  and beautiful on the days when you don't feel beautiful.
+ </p>
+ <p class="lead">
+  So please remember this whenever you doubt yourself:
+  <span class="pink">my Bebi is pretty. End of discussion. 😤💗</span>
+ </p>
+ <p><b>Made especially for Natasha, with love from Bebi's very lucky boyfriend. ❤️</b></p>
+</section>
+<footer>Made with love, HTML, JavaScript, and absolutely zero chill. ♡</footer>
+</main>
+
+<script>
+const msgs=[
+ "Pretty Bebi detected. 😳💗",
+ "Your face card remains undefeated. 🥹",
+ "Warning: excessive cuteness! 🚨💕",
+ "You're my favorite person to listen to. Even when you talk A LOT. 😂",
+ "Hyper Bebi energy: 1000%. ⚡",
+ "I'd choose you again. Easily. ❤️",
+ "You're cuter than this heart. And that's saying something. 😭",
+ "Okay fine... you're REALLY pretty. 😌"
+];
+let score=0,timer;
+const heart=document.getElementById('heart'),area=document.getElementById('area');
+function move(){
+ const x=Math.random()*Math.max(1,area.clientWidth-heart.offsetWidth-12);
+ const y=Math.random()*Math.max(1,area.clientHeight-heart.offsetHeight-12);
+ heart.style.left=x+'px';heart.style.top=y+'px';
+}
+function startGame(){
+ score=0;clearInterval(timer);
+ document.getElementById('score').textContent='Bebi hearts: 0 / 5';
+ document.getElementById('gameMsg').innerHTML='Catch the heart before it escapes! 💨';
+ document.getElementById('start').style.display='none';
+ document.getElementById('final').style.display='none';
+ heart.style.display='block';move();timer=setInterval(move,850);
+}
+heart.onclick=()=>{
+ score++;
+ document.getElementById('score').textContent=`Bebi hearts: ${score} / 5`;
+ document.getElementById('gameMsg').textContent=msgs[Math.floor(Math.random()*msgs.length)];
+ if(score>=5){
+   clearInterval(timer);heart.style.display='none';
+   document.getElementById('final').style.display='block';
+   document.getElementById('gameMsg').textContent='You did it! 🥳';
+ } else move();
+};
+</script>
+</body>
+</html>
